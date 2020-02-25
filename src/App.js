@@ -1,17 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Clock from "./components/Clock/Clock";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello word
-        </p>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return <Clock />;
+  }
 }
 
 export default App;
