@@ -1,16 +1,28 @@
 import axios from "axios";
+import qs from "querystring";
 
 const service = {
-  getAllTodos: async () => {
-    const todos = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos?_limit=10",
+  getAllCountries: async () => {
+    const getAllCountries = await axios.get("http://localhost:3300/countries", {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+    return getAllCountries.data;
+  },
+  addUser: async body => {
+    console.log(body);
+    const addUser = await axios.post(
+      "http://localhost:3300/users/user",
+      qs.stringify(body),
       {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
       }
     );
-    return todos.data;
+    console.log(addUser);
+    return addUser;
   }
 };
 

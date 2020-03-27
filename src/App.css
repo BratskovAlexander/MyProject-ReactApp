@@ -1,29 +1,37 @@
-.page {
+html{
+  height: 100%;
+}
+
+.mainPage {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-h1 {
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-ul.list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.item {
-  padding: .5rem;
+.header{
   display: flex;
   justify-content: space-between;
-  margin: .5rem auto;
+  background-color: rgb(175, 204, 236);
 }
 
-.done {
-  text-decoration: line-through;
+.footer {
+  flex: 0 0 auto;
 }
 
-.addTodo {
+.main {
   display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  padding: 5px;
 }
